@@ -28,5 +28,12 @@ loop_channels;
 
 while true; do
     xdotool keydown ctrl+Tab; xdotool keyup ctrl+Tab;
+
+    currenttime=$(date +%H:%M)
+
+    if [[ "$currenttime" > "1:00" ]] && [[ "$currenttime" < "1:15" ]]; then
+        xdotool keydown ctrl+r; xdotool keyup ctrl+r;
+    fi
+
     sleep 300;
 done
